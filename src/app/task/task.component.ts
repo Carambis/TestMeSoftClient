@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Task} from './Task';
 import {Router} from '@angular/router';
 
 @Component({
@@ -13,10 +12,8 @@ export class TaskComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) { }
 
 
-  task: Task;
-
   ngOnInit() {
-    this.router.navigate(['/task', '1'], {
+    this.router.navigate(['/task/grammar'], {
       skipLocationChange: true
     });
   }
