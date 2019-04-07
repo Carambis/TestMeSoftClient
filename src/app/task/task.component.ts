@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Task} from './Task';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-task',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient, private router: Router) { }
+
+
+  task: Task;
 
   ngOnInit() {
+    this.router.navigate(['/task', '1'], {
+      skipLocationChange: true
+    });
   }
 
 }
