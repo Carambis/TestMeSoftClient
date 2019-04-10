@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {HttpClient} from '@angular/common/http';
+import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-main-page',
@@ -8,12 +10,14 @@ import {Router} from '@angular/router';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor(private router: Router) { }
-
-  ngOnInit(){
+  constructor(private router: Router, private httpClient: HttpClient) {
   }
 
-  getTask() {
+  ngOnInit() {
+  }
+
+  startTask() {
+    this.httpClient.get(environment.baseUrl + '/start');
     this.router.navigate(['/task']);
   }
 }
