@@ -33,6 +33,9 @@ import {CalendarComponent} from './task/calendar/calendar.component';
 import {FilterComponent} from './task/filter/filter.component';
 import {InstructionComponent} from './instruction/instruction.component';
 import {TheoryComponent} from './theory/theory.component';
+import {ScrollPanelModule} from 'primeng/scrollpanel';
+import {CheckboxModule} from 'primeng/checkbox';
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 @NgModule({
   declarations: [
@@ -71,7 +74,10 @@ import {TheoryComponent} from './theory/theory.component';
     ButtonModule,
     InputTextModule,
     MultiSelectModule,
-    DropdownModule
+    DropdownModule,
+    ScrollPanelModule,
+    CheckboxModule,
+    RadioButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

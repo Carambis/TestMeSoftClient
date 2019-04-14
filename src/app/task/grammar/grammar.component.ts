@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Task} from '../entity/Task';
+import {HttpService} from '../commonHttp';
 
 @Component({
   selector: 'app-grammar-task',
@@ -7,9 +9,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class GrammarComponent implements OnInit {
 
-  constructor() { }
+  openAnswer = false;
+  task: Task = new Task();
+  selectedValue: string;
+
+  constructor(private httpService: HttpService) {
+  }
 
   ngOnInit() {
+    this.httpService.initTask('grammar').subscribe((data: Task) => this.task = data);
   }
 
 }

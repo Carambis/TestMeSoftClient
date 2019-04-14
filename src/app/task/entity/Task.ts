@@ -1,4 +1,5 @@
 export class Task {
-  id: string;
-  name: string;
+  taskName: string;
+  taskType: string;
+  questions: string;
 }

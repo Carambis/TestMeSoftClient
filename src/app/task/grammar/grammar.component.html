@@ -1,3 +1,48 @@
-<div>
-<p></p>
+<router-outlet></router-outlet>
+<div style="text-align: center">
+  <div class="ui-g" *ngIf="openAnswer == false">
+    <div class="ui-g-12 ui-md-4" style="width: 60%; margin: 0 auto">
+      <p-scrollPanel [style]="{width: '100%', height: '300px'}">
+        <div style="padding:1em;line-height:1.5">
+          ПРАВА НА УСТАНОВКУ И ИСПОЛЬЗОВАНИЕ.
+          a. Одна копия на устройство. Вы можете установить одну копию программного
+          обеспечения на одно устройство. Такое устройство называется «лицензированным
+          устройством».
+          b. Лицензированное устройство. Вы имеете право одновременно использовать только
+          одну копию программного обеспечения на лицензированном устройстве.
+          c. Портативное устройство. Вы можете установить еще одну копию программного
+          обеспечения на переносное устройство исключительно для использования основным
+          пользователем лицензированного устройства.
+          d. Разделение на компоненты. Компоненты программного обеспечения лицензируются все
+          вместе как единый продукт. Вы не имеете права отделять компоненты и устанавливать их
+          на других устройствах.
+          e. Разные версии. Программное обеспечение может включать несколько версий (например,
+          32- и 64-разрядную). Вы имеете право установить и одновременно использовать только
+          одну версию.
+        </div>
+      </p-scrollPanel>
+    </div>
+
+  </div>
+  <div style="margin-top: 3%" *ngIf="openAnswer == false">
+    <p-checkbox name="groupname" value="Нажми меня"></p-checkbox>
+  </div>
+
+  <div *ngIf="openAnswer">
+    <div *ngFor="let question of task.questions">
+      <p-radioButton value="{{question}}" label="${{question}}" [(ngModel)]="selectedValue"></p-radioButton>
+    </div>
+  </div>
+
+  <div style="margin-top: 3%" *ngIf="openAnswer == false">
+    <button pButton type="button" label="Показать варианты ответов"
+            class="ui-button-rounded ui-button-success" (click)="openAnswer = true"></button>
+  </div>
+
+  <div style="margin-top: 3%" *ngIf="openAnswer">
+    <button pButton type="button" label="Подтвердить"
+            class="ui-button-rounded ui-button-success" (click)="httpService.aproveAnswer('grammar', selectedValue)"></button>
+  </div>
+
+
 </div>
