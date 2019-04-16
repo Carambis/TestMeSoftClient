@@ -22,35 +22,37 @@ import {LocationComponent} from './task/location/location.component';
 import {RadiobuttonCheckComponent} from './task/radiobutton-check/radiobutton-check.component';
 import {SortProblemComponent} from './task/sort-problem/sort-problem.component';
 import {UnckeckParamComponent} from './task/unckeck-param/unckeck-param.component';
+import {ResultPageComponent} from './result-page/result-page.component';
 
 
 const tasks: Routes = [
-  { path: 'grammar', component: GrammarComponent},
-  { path: 'alignment', component: AlignmentComponent},
-  { path: 'button-double-click', component: ButtonDoubleClickComponent},
-  { path: 'button-function', component: ButtonFunctionComponent},
-  { path: 'calendar', component: CalendarComponent},
-  { path: 'checkbox', component: CheckboxComponent},
-  { path: 'checkbox-check', component: CheckboxCheckComponent},
-  { path: 'cursor', component: CursorComponent},
-  { path: 'file-type-check', component: FileTypeCheckComponent},
-  { path: 'filter', component: FilterComponent},
-  { path: 'font', component: FontComponent},
-  { path: 'form-problem', component: FormProblemComponent},
-  { path: 'hint', component: HintComponent},
-  { path: 'illumination', component: IlluminationComponent},
-  { path: 'link', component: LinkComponent},
-  { path: 'link-work', component: LinkWorkComponent},
-  { path: 'location', component: LocationComponent},
-  { path: 'radiobutton-check', component: RadiobuttonCheckComponent},
-  { path: 'sort-problem', component: SortProblemComponent},
-  { path: 'unckeck-param', component: UnckeckParamComponent}
+  {path: 'grammar', component: GrammarComponent},
+  {path: 'alignment', component: AlignmentComponent},
+  {path: 'button-double-click', component: ButtonDoubleClickComponent},
+  {path: 'button-function', component: ButtonFunctionComponent},
+  {path: 'calendar', component: CalendarComponent},
+  {path: 'checkbox', component: CheckboxComponent},
+  {path: 'checkbox-check', component: CheckboxCheckComponent},
+  {path: 'cursor', component: CursorComponent},
+  {path: 'file-type-check', component: FileTypeCheckComponent},
+  {path: 'filter', component: FilterComponent},
+  {path: 'font', component: FontComponent},
+  {path: 'form-problem', component: FormProblemComponent},
+  {path: 'hint', component: HintComponent},
+  {path: 'illumination', component: IlluminationComponent},
+  {path: 'link', component: LinkComponent},
+  {path: 'link-work', component: LinkWorkComponent},
+  {path: 'location', component: LocationComponent},
+  {path: 'radiobutton-check', component: RadiobuttonCheckComponent},
+  {path: 'sort-problem', component: SortProblemComponent},
+  {path: 'unckeck-param', component: UnckeckParamComponent}
 ];
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: MainPageComponent},
-  { path: 'task', component: TaskComponent, children: tasks}
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'home', component: MainPageComponent},
+  {path: 'task', component: TaskComponent, children: tasks},
+  {path: 'finishTest', component: ResultPageComponent}
 ];
 
 @NgModule({

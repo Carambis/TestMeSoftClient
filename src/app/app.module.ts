@@ -10,7 +10,7 @@ import {TaskComponent} from './task/task.component';
 import {MenubarModule} from 'primeng/menubar';
 import {ButtonModule} from 'primeng/button';
 import {MainPageComponent} from './main-page/main-page.component';
-import {DropdownModule, InputTextModule, MultiSelectModule} from 'primeng/primeng';
+import {DropdownModule, InputTextModule, MultiSelectModule, ProgressBarModule} from 'primeng/primeng';
 import {GrammarComponent} from './task/grammar/grammar.component';
 import {FontComponent} from './task/font/font.component';
 import {HintComponent} from './task/hint/hint.component';
@@ -36,6 +36,11 @@ import {TheoryComponent} from './theory/theory.component';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
 import {CheckboxModule} from 'primeng/checkbox';
 import {RadioButtonModule} from 'primeng/radiobutton';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {ResultPageComponent} from './result-page/result-page.component';
+import {AccordionModule} from 'primeng/accordion';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AnswerpartComponent} from './answerpart/answerpart.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +68,9 @@ import {RadioButtonModule} from 'primeng/radiobutton';
     CalendarComponent,
     FilterComponent,
     InstructionComponent,
-    TheoryComponent
+    TheoryComponent,
+    ResultPageComponent,
+    AnswerpartComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +84,11 @@ import {RadioButtonModule} from 'primeng/radiobutton';
     DropdownModule,
     ScrollPanelModule,
     CheckboxModule,
-    RadioButtonModule
+    RadioButtonModule,
+    ProgressSpinnerModule,
+    AccordionModule,
+    BrowserAnimationsModule,
+    ProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

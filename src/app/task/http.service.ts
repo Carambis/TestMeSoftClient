@@ -24,7 +24,7 @@ export class HttpService {
     });
   }
 
-  aproveAnswer(taskRest: string, answer: string) {
+  addUserAnswer(taskRest: string, answer: string) {
     this.http.post(environment.baseUrl + 'task-service/saveAnswer', null, {
       headers: new HttpHeaders({
         token: sessionStorage.getItem('access_token')

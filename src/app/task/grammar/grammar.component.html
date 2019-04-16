@@ -1,48 +1,33 @@
 <router-outlet></router-outlet>
 <div style="text-align: center">
+  <H1>[Пользовательский интерфейс] - Грамматика</H1>
   <div class="ui-g" *ngIf="openAnswer == false">
     <div class="ui-g-12 ui-md-4" style="width: 60%; margin: 0 auto">
       <p-scrollPanel [style]="{width: '100%', height: '300px'}">
-        <div style="padding:1em;line-height:1.5">
-          ПРАВА НА УСТАНОВКУ И ИСПОЛЬЗОВАНИЕ.
+        <div style="padding:1em;line-height:1.5; text-align: left">
+          ПРАВА НА УСТАНОВКУ И ИСПОЛЬЗОВАНИЕ.<br>
           a. Одна копия на устройство. Вы можете установить одну копию программного
           обеспечения на одно устройство. Такое устройство называется «лицензированным
-          устройством».
+          устройством».<br>
           b. Лицензированное устройство. Вы имеете право одновременно использовать только
-          одну копию программного обеспечения на лицензированном устройстве.
+          одну копию программного обеспечения на лицензированном устройстве.<br>
           c. Портативное устройство. Вы можете установить еще одну копию программного
           обеспечения на переносное устройство исключительно для использования основным
-          пользователем лицензированного устройства.
+          пользователем лицензированного устройства.<br>
           d. Разделение на компоненты. Компоненты программного обеспечения лицензируются все
           вместе как единый продукт. Вы не имеете права отделять компоненты и устанавливать их
-          на других устройствах.
+          на других устройствах.<br>
           e. Разные версии. Программное обеспечение может включать несколько версий (например,
           32- и 64-разрядную). Вы имеете право установить и одновременно использовать только
-          одну версию.
+          одну версию.<br>
         </div>
       </p-scrollPanel>
     </div>
 
-  </div>
-  <div style="margin-top: 3%" *ngIf="openAnswer == false">
-    <p-checkbox name="groupname" value="Нажми меня"></p-checkbox>
-  </div>
-
-  <div *ngIf="openAnswer">
-    <div *ngFor="let question of task.questions">
-      <p-radioButton value="{{question}}" label="${{question}}" [(ngModel)]="selectedValue"></p-radioButton>
+    <div style="margin-top: 3%" *ngIf="openAnswer == false">
+      <p-checkbox name="groupname" label="Подтвердить"></p-checkbox>
     </div>
+
   </div>
-
-  <div style="margin-top: 3%" *ngIf="openAnswer == false">
-    <button pButton type="button" label="Показать варианты ответов"
-            class="ui-button-rounded ui-button-success" (click)="openAnswer = true"></button>
-  </div>
-
-  <div style="margin-top: 3%" *ngIf="openAnswer">
-    <button pButton type="button" label="Подтвердить"
-            class="ui-button-rounded ui-button-success" (click)="httpService.aproveAnswer('grammar', selectedValue)"></button>
-  </div>
-
-
+  <app-answerpart [taskRest]="taskRest" [openAnswer]="openAnswer" [questions]="task.questions" (onchanged)="onChanged($event)"></app-answerpart>
 </div>
