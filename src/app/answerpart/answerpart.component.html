@@ -1,0 +1,15 @@
+<div *ngIf="openAnswer">
+  <div *ngFor="let question of questions">
+    <p-radioButton value="{{question}}" label="${{question}}" [(ngModel)]="selectedValue"></p-radioButton>
+  </div>
+</div>
+
+<div style="margin-top: 5%" *ngIf="openAnswer == false">
+  <button pButton type="button" label="Показать варианты ответов"
+          class="ui-button-rounded ui-button-success" (click)="change(true)"></button>
+</div>
+
+<div style="margin-top: 3%" *ngIf="openAnswer">
+  <button pButton type="button" label="Подтвердить"
+          class="ui-button-rounded ui-button-success" (click)="saveAnswer()"></button>
+</div>
