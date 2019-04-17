@@ -41,6 +41,8 @@ import {ResultPageComponent} from './result-page/result-page.component';
 import {AccordionModule} from 'primeng/accordion';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AnswerpartComponent} from './answerpart/answerpart.component';
+import {TooltipModule} from 'primeng/tooltip';
+import {ListboxModule} from 'primeng/listbox';
 
 @NgModule({
   declarations: [
@@ -88,7 +90,9 @@ import {AnswerpartComponent} from './answerpart/answerpart.component';
     ProgressSpinnerModule,
     AccordionModule,
     BrowserAnimationsModule,
-    ProgressBarModule
+    ProgressBarModule,
+    TooltipModule,
+    ListboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

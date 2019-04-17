@@ -1,3 +1,28 @@
-<p>
-  location works!
-</p>
+<div>
+  <div class="ui-g-12 ui-md-4">
+    <H1>[Пользовательский интерфейс] - location</H1>
+    <div *ngIf="openAnswer == false">
+      <div style="margin-top: 7%">
+      <span class="ui-float-label">
+        <input id="input" type="text" size="30" pInputText [(ngModel)]="text"/><span id="text">{{size()}}</span>
+        <label for="input">Имя</label>
+        </span>
+      </div>
+      <div style="margin-top: 7%">
+      <span class="ui-float-label">
+       <input id="lastName" type="text" size="30" pInputText/>
+       <label for="lastName">Фамилия</label>
+      </span>
+      </div>
+      <div style="margin-top: 7%">
+      <span class="ui-float-label">
+       <input id="groupNumber" type="text" size="30" pInputText/>
+       <label for="groupNumber">Номер группы</label>
+      </span>
+      </div>
+    </div>
+    <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.questions"
+                    [openAnswer]="openAnswer"></app-answerpart>
+  </div>
+
+</div>

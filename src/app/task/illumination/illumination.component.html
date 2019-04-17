@@ -1,3 +1,11 @@
-<p>
-  illumination works!
-</p>
+<div style="text-align: center">
+  <H1>[Пользовательский интерфейс] - illumination</H1>
+  <div class="ui-g" *ngIf="openAnswer == false">
+    <div class="ui-g-12 ui-md-4" style="width: 60%; margin: 0 auto">
+      <p-dropdown [options]="cities" optionLabel="name" styleClass="newStyle"></p-dropdown>
+    </div>
+  </div>
+
+  <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.questions"
+                  [openAnswer]="openAnswer"></app-answerpart>
+</div>
