@@ -43,6 +43,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AnswerpartComponent} from './answerpart/answerpart.component';
 import {TooltipModule} from 'primeng/tooltip';
 import {ListboxModule} from 'primeng/listbox';
+import {TieredMenuModule} from 'primeng/tieredmenu';
+import {ToastModule} from 'primeng/toast';
+import {FileUploadModule} from 'primeng/fileupload';
 
 @NgModule({
   declarations: [
@@ -92,7 +95,10 @@ import {ListboxModule} from 'primeng/listbox';
     BrowserAnimationsModule,
     ProgressBarModule,
     TooltipModule,
-    ListboxModule
+    ListboxModule,
+    TieredMenuModule,
+    ToastModule,
+    FileUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]

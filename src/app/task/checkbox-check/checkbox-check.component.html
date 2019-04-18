@@ -1,3 +1,18 @@
-<p>
-  checkbox-check works!
-</p>
+<div style="text-align: center">
+  <H1>[Пользовательский интерфейс] - link</H1>
+  <div class="ui-g" *ngIf="openAnswer == false">
+    <div style="margin: 0 auto">
+      <h2>Время занятий курсов по английскому языку</h2>
+      <p>(выбирите два и более варианта)</p>
+
+      <div style="margin-top: 3%">
+        <div class="ui-g-12"><p-checkbox name="group1" value="с 10 до 12" label="с 10 до 12" [(ngModel)]="selected" (onChange)="change('с 10 до 12')" ></p-checkbox></div>
+        <div class="ui-g-12"><p-checkbox name="group1" value="с 12 до 14" label="с 12 до 14" [(ngModel)]="selected" (onChange)="change('с 12 до 14')"></p-checkbox></div>
+        <div class="ui-g-12"><p-checkbox name="group1" value="с 14 до 16" label="с 14 до 16" [(ngModel)]="selected" (onChange)="change('с 14 до 16')"></p-checkbox></div>
+      </div>
+    </div>
+  </div>
+
+  <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.questions"
+                  [openAnswer]="openAnswer"></app-answerpart>
+</div>

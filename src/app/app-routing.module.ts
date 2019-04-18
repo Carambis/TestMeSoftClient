@@ -45,7 +45,7 @@ const tasks: Routes = [
   {path: 'location', component: LocationComponent},
   {path: 'radiobutton-check', component: RadiobuttonCheckComponent},
   {path: 'sort-problem', component: SortProblemComponent},
-  {path: 'unckeck-param', component: UnckeckParamComponent}
+  {path: 'uncheck-param', component: UnckeckParamComponent}
 ];
 
 const routes: Routes = [

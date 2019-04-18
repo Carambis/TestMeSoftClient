@@ -1,3 +1,19 @@
-<p>
-  file-type-check works!
-</p>
+<p-toast></p-toast>
+<div style="text-align: center">
+  <H1>[Пользовательский интерфейс] - link</H1>
+  <div class="ui-g" *ngIf="openAnswer == false">
+    <div style="margin: 0 auto">
+        <p-fileUpload #form name="demo[]" customUpload="true" (uploadHandler)="myUploader($event, form)"
+                    multiple="multiple" accept="image/*" maxFileSize="1000000">
+        <ng-template pTemplate="content">
+          <ul *ngIf="uploadedFiles.length">
+            <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+          </ul>
+        </ng-template>
+      </p-fileUpload>
+    </div>
+  </div>
+
+  <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.questions"
+                  [openAnswer]="openAnswer"></app-answerpart>
+</div>

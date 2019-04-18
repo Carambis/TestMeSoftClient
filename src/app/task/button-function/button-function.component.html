@@ -1,3 +1,29 @@
-<p>
-  button-function works!
-</p>
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+<div>
+  <div class="ui-g-12 ui-md-4">
+    <h2 style="text-align: center">что то протест</h2>
+    <div style="margin-top: 7%">
+      <span class="ui-float-label">
+       <input id="firstName" type="text" size="30" pInputText [(ngModel)]="user.firstName" style="width: 100%;"/>
+       <label for="firstName">Имя</label>
+      </span>
+    </div>
+    <div style="margin-top: 7%">
+      <span class="ui-float-label">
+       <input id="lastName" type="text" size="30" pInputText [(ngModel)]="user.lastName" style="width: 100%;"/>
+       <label for="lastName">Фамилия</label>
+      </span>
+    </div>
+    <div style="margin-top: 7%">
+      <span class="ui-float-label">
+       <input id="groupNumber" type="text" size="30" pInputText [(ngModel)]="user.groupNumber" style="width: 100%;"/>
+       <label for="groupNumber">Номер группы</label>
+      </span>
+    </div>
+
+    <div style="margin-top: 7%">
+      <button pButton type="button" label="Авторизоваться"
+              class="ui-button-rounded ui-button-success" (click)="clear()"></button>
+    </div>
+  </div>
+</div>

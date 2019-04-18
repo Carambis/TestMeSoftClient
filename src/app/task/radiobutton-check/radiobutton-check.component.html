@@ -1,3 +1,33 @@
-<p>
-  radionbutton-check works!
-</p>
+<div>
+  <div class="ui-g-12 ui-md-4">
+    <h2 style="text-align: center">что то протест</h2>
+    <div style="margin-top: 7%">
+      <span class="ui-float-label">
+       <input id="firstName" type="text" size="30" pInputText style="width: 100%;"/>
+       <label for="firstName">Имя</label>
+      </span>
+    </div>
+    <div style="margin-top: 7%">
+      <span class="ui-float-label">
+       <input id="lastName" type="text" size="30" pInputText style="width: 100%;"/>
+       <label for="lastName">Фамилия</label>
+      </span>
+    </div>
+    <div style="margin-top: 7%">
+      <span class="ui-float-label">
+       <input id="groupNumber" type="text" size="30" pInputText style="width: 100%;"/>
+       <label for="groupNumber">Номер группы</label>
+      </span>
+    </div>
+    <div style="margin-top: 7%">
+      <p-radioButton name="groupname" value="val1" label="Мужчина"></p-radioButton>
+      <p-radioButton name="groupname1" value="val2" label="Женщина" ></p-radioButton>
+    </div>
+    <div style="margin-top: 7%">
+      <button pButton type="button" label="Авторизоваться"
+              class="ui-button-rounded ui-button-success"></button>
+    </div>
+  </div>
+  <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.questions"
+                  [openAnswer]="openAnswer"></app-answerpart>
+</div>
