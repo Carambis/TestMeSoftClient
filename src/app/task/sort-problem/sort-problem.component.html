@@ -1,3 +1,26 @@
-<p>
-  sort-problem works!
-</p>
+<div style="text-align: center">
+  <H1>[Пользовательский интерфейс] - Проблемы сортировки</H1>
+  <div class="ui-g" *ngIf="openAnswer == false">
+    <div class="ui-g-12 ui-md-4" style="width: 60%; margin: 0 auto">
+      <p-table [columns]="cols" [value]="towns" (sortFunction)="customSort($event)" [customSort]="true">
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+              {{col.header}}
+              <p-sortIcon [field]="col.field"></p-sortIcon>
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr>
+            <td *ngFor="let col of columns">
+              {{rowData[col.field]}}
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+  <app-answerpart [taskRest]="taskRest" [openAnswer]="openAnswer" [questions]="task.questions"
+                  (onchanged)="openAnswer = $event"></app-answerpart>
+</div>
