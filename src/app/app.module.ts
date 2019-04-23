@@ -47,6 +47,9 @@ import {TieredMenuModule} from 'primeng/tieredmenu';
 import {ToastModule} from 'primeng/toast';
 import {FileUploadModule} from 'primeng/fileupload';
 import {TableModule} from 'primeng/table';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import {CalendarModule} from 'primeng/calendar';
 
 @NgModule({
   declarations: [
@@ -100,7 +103,10 @@ import {TableModule} from 'primeng/table';
     TieredMenuModule,
     ToastModule,
     FileUploadModule,
-    TableModule
+    TableModule,
+    MessagesModule,
+    MessageModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

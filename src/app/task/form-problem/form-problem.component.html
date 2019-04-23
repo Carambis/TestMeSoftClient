@@ -3,30 +3,27 @@
     <h2 style="text-align: center">что то протест</h2>
     <div style="margin-top: 7%">
       <span class="ui-float-label" *ngIf="openAnswer == false">
-       <input id="firstName" type="text" size="30" pInputText style="width: 100%;"/>
-       <label for="firstName">Имя</label>
+       <input id="firstName" type="text" size="30" pInputText style="width: 60%;" placeholder="Имя"
+              [(ngModel)]="name"/>
+        <p-message severity="error" text="Field is required" *ngIf="mesName==true"></p-message>
       </span>
     </div>
     <div style="margin-top: 7%" *ngIf="openAnswer == false">
       <span class="ui-float-label">
-       <input id="lastName" type="text" size="30" pInputText style="width: 100%;"/>
+       <input id="lastName" type="text" size="30" pInputText style="width: 60%;"/>
        <label for="lastName">Фамилия</label>
       </span>
     </div>
     <div style="margin-top: 7%" *ngIf="openAnswer == false">
       <span class="ui-float-label">
-       <input id="groupNumber" type="text" size="30" pInputText style="width: 100%;"/>
-       <label for="groupNumber">Номер группы</label>
+       <input id="groupNumber" type="text" size="30" pInputText style="width: 60%;" [(ngModel)]="groupNumber" placeholder="Номер группы"/>
+        <p-message severity="error" text="Field is required" *ngIf="grNumber==true"></p-message>
       </span>
-    </div>
-
-    <div style="margin-top: 7%" *ngIf="openAnswer == false">
-      <h1>Вы успешно авторизованы</h1>
     </div>
 
     <div style="margin-top: 7%" *ngIf="openAnswer == false ">
       <button pButton type="button" label="Авторизоваться"
-              class="ui-button-rounded ui-button-success"></button>
+              class="ui-button-rounded ui-button-success" (click)="validate()"></button>
     </div>
     <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.questions"
                     [openAnswer]="openAnswer"></app-answerpart>
