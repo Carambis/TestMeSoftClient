@@ -1,7 +1,7 @@
-<div style="text-align: center">
-  <H1>{{task.taskName}} - {{task.header}}</H1>
-  <div *ngIf="openAnswer == false">
-    <div class="ui-g-12 ui-md-4">
+<H1 style="margin-top: 5%; text-align: center">{{task.taskName}} - {{task.header}}</H1>
+<div class="ui-g">
+  <div class="ui-g-12 ui-md-4" style="margin: 0 auto;text-align: center ">
+    <div *ngIf="openAnswer == false">
       <div style="margin-top: 7%">
       <span class="ui-float-label">
        <input id="firstName" type="text" pTooltip="Добавить товар в корзину" size="30" pInputText style="width: 100%;"/>
@@ -21,12 +21,8 @@
       </span>
       </div>
 
-      <div style="margin-top: 7%">
-        <button pButton type="button" label="Авторизоваться"
-                class="ui-button-rounded ui-button-success"></button>
-      </div>
+      <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.answers"
+                      [openAnswer]="openAnswer"></app-answerpart>
     </div>
-    <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.answers"
-                    [openAnswer]="openAnswer"></app-answerpart>
   </div>
 </div>

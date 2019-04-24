@@ -2,25 +2,29 @@
 <div class="ui-g">
   <div class="ui-g-12 ui-md-6" style="margin: 0 auto;text-align: center ">
     <div style="margin-top: 7%">
-      <span class="ui-float-label" *ngIf="openAnswer == false">
-       <input id="firstName" type="text" size="30" pInputText style="width: 60%;" placeholder="Имя"
+      <span class="ui-float-label" *ngIf="openAnswer == false && hide == false">
+       <input id="firstName" type="text" size="30" pInputText style="width: 60%;" placeholder="Имя *"
               [(ngModel)]="name"/>
         <p-message severity="error" text="Field is required" *ngIf="mesName==true"></p-message>
       </span>
     </div>
-    <div style="margin-top: 7%" *ngIf="openAnswer == false">
+    <div style="margin-top: 7%" *ngIf="openAnswer == false && hide == false">
       <span class="ui-float-label">
-       <input id="lastName" type="text" size="60" pInputText style="width: 60%;" placeholder="Фамилия"/>
+       <input id="lastName" type="text" size="60" pInputText style="width: 60%;" placeholder="Фамилия" [(ngModel)]="lastName"/>
       </span>
     </div>
-    <div style="margin-top: 7%" *ngIf="openAnswer == false">
+    <div style="margin-top: 7%" *ngIf="openAnswer == false && hide == false">
       <span class="ui-float-label">
-       <input id="groupNumber" type="text" size="30" pInputText style="width: 60%;" [(ngModel)]="groupNumber" placeholder="Номер группы"/>
+       <input id="groupNumber" type="text" size="30" pInputText style="width: 60%;" [(ngModel)]="groupNumber" placeholder="Номер группы *"/>
         <p-message severity="error" text="Field is required" *ngIf="grNumber==true"></p-message>
       </span>
     </div>
 
-    <div style="margin-top: 7%" *ngIf="openAnswer == false ">
+    <div style="margin-top: 7%" *ngIf="openAnswer == false && hide == true">
+      <h1>Вы успешно зарегистрированы</h1>
+    </div>
+
+    <div style="margin-top: 7%" *ngIf="openAnswer == false && hide == false ">
       <button pButton type="button" label="Авторизоваться"
               class="ui-button-rounded ui-button-success" (click)="validate()"></button>
     </div>

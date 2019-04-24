@@ -18,6 +18,8 @@ export class FormProblemComponent implements OnInit {
   groupNumber: string;
   mesName = false;
   grNumber = false;
+  hide = false;
+  lastName: string;
 
   constructor(private httpService: HttpService,
               private messageService: MessageService) {
@@ -28,9 +30,15 @@ export class FormProblemComponent implements OnInit {
   }
 
   validate() {
+    if (this.name != null && this.name.length !== 0
+      && this.groupNumber != null && this.groupNumber.length !== 0) {
+      this.hide = true;
+      return;
+    }
     this.mesName = this.name == null || this.name.length === 0;
     this.grNumber = this.groupNumber == null || this.groupNumber.length === 0;
     this.name = '';
     this.groupNumber = '';
+    this.lastName = '';
   }
 }
