@@ -1,5 +1,6 @@
 export class Task {
   taskName: string;
+  header: string;
   taskType: string;
-  questions: string[];
+  answers: string[];
 }

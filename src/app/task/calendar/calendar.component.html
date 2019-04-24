@@ -23,15 +23,15 @@
     </div>
 
     <div style="margin-top: 7%" *ngIf="openAnswer == false && hide == true">
-      <h1>Вы успешно авторизованы</h1>
+      <h1>Вы успешно зарегистрированы</h1>
     </div>
 
     <div style="margin-top: 7%" *ngIf="openAnswer == false && hide == false ">
-      <button pButton type="button" label="Авторизоваться"
+      <button pButton type="button" label="Зарегистрироваться"
               class="ui-button-rounded ui-button-success" (click)="hide = true"></button>
     </div>
 
-    <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.questions"
+    <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.answers"
                     [openAnswer]="openAnswer"></app-answerpart>
   </div>
 </div>

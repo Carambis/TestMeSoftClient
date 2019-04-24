@@ -10,8 +10,6 @@ import {environment} from '../../environments/environment';
 })
 export class TaskComponent implements OnInit {
 
-  private nextTaskId: string;
-
   constructor(private http: HttpClient, private router: Router) {
   }
 
@@ -26,7 +24,6 @@ export class TaskComponent implements OnInit {
       }), responseType: 'text'
     }).subscribe((data: string) => {
       if (data === 'finalTask') {
-        // TODO do this http
         this.http.get(environment.baseUrl + 'task_service/getResult');
       } else {
         this.router.navigate(['/task/' + data], {

@@ -28,7 +28,7 @@
       <button pButton type="button" label="Авторизоваться"
               class="ui-button-rounded ui-button-success" (dblclick)="hide=true"></button>
     </div>
-    <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.questions"
+    <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.answers"
                     [openAnswer]="openAnswer"></app-answerpart>
   </div>
 </div>
