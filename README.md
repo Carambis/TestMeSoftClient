@@ -43,7 +43,7 @@ src/app/task/font
 src/app/task/hint
 
 4. выравнивание названий полей разное, не привязано к одной стороне - левой:
-src/app/task/font
+src/app/task/alignment
 
 5. расположение вводимого текста внутри поля (начинаю писать много букв - выходит за поле ввода):
 src/app/task/location

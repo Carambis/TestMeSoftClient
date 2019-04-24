@@ -27,9 +27,10 @@ export class FileTypeCheckComponent implements OnInit {
   myUploader(event, form) {
     for (const file of event.files) {
       this.uploadedFiles.push(file);
+      this.messageService.add({severity: 'info', summary: 'Файл загуржен', detail: ''});
+
     }
     this.uploadedFiles = [];
-    this.messageService.add({severity: 'info', summary: 'Файл загуржен', detail: ''});
     form.clear();
   }
 

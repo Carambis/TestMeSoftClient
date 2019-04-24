@@ -21,7 +21,7 @@ export class FilterComponent implements OnInit {
     this.httpService.initTask(this.taskRest).subscribe((data: Task) => this.task = data);
     this.cols = [
       {field: 'townName', header: 'Название города'},
-      {field: 'population', header: 'Насетеление, чел'},
+      {field: 'population', header: 'Население, чел'},
       {field: 'popDensity', header: 'Плотность населения, чел/км2'}
     ];
 

@@ -3,8 +3,9 @@
   <H1>[Пользовательский интерфейс] - link</H1>
   <div class="ui-g" *ngIf="openAnswer == false">
     <div style="margin: 0 auto">
+      <h2>Загрузите изображения формата png</h2>
         <p-fileUpload #form name="demo[]" customUpload="true" (uploadHandler)="myUploader($event, form)"
-                    multiple="multiple" accept="image/*" maxFileSize="1000000">
+                    multiple="multiple" accept="image/*">
         <ng-template pTemplate="content">
           <ul *ngIf="uploadedFiles.length">
             <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
