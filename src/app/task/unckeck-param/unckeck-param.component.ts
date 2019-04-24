@@ -13,7 +13,7 @@ export class UnckeckParamComponent implements OnInit {
   openAnswer = false;
   task: Task = new Task();
   taskRest = 'uncheck-param';
-  select = true;
+  select = false;
 
   ngOnInit() {
     this.httpService.initTask(this.taskRest).subscribe((data: Task) => this.task = data);
