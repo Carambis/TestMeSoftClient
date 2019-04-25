@@ -23,8 +23,9 @@ export class TaskComponent implements OnInit {
         token: sessionStorage.getItem('access_token')
       }), responseType: 'text'
     }).subscribe((data: string) => {
-      if (data === 'finalTask') {
-        this.http.get(environment.baseUrl + 'task_service/getResult');
+      if (data === 'finishTest') {
+        this.router.navigate(['/result']);
+        // this.http.get(environment.baseUrl + 'task_service/getResult');
       } else {
         this.router.navigate(['/task/' + data], {
           skipLocationChange: true

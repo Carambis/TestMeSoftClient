@@ -13,13 +13,16 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
-        label: 'Главная'
+        label: 'Главная',
+        routerLink: ['home']
       },
       {
-        label: 'Теория'
+        label: 'Теория',
+        routerLink: ['theory']
       },
       {
-        label: 'Инструкция'
+        label: 'Инструкция',
+        routerLink: ['instruction']
       }
     ];
   }

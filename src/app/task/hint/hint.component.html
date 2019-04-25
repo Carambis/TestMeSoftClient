@@ -20,9 +20,8 @@
        <label for="groupNumber">Номер группы</label>
       </span>
       </div>
-
-      <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.answers"
-                      [openAnswer]="openAnswer"></app-answerpart>
     </div>
+    <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.answers"
+                    [openAnswer]="openAnswer"></app-answerpart>
   </div>
 </div>

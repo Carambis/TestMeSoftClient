@@ -50,6 +50,7 @@ import {TableModule} from 'primeng/table';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {CalendarModule} from 'primeng/calendar';
+import {LoginComponent} from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import {CalendarModule} from 'primeng/calendar';
     InstructionComponent,
     TheoryComponent,
     ResultPageComponent,
-    AnswerpartComponent
+    AnswerpartComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

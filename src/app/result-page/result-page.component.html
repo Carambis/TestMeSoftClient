@@ -1,19 +1,19 @@
 <div style="width: 60%;margin: 0 auto;">
   <h2 style="text-align: center">Результаты тестирования</h2>
 
-  <h3>Вы ответили на 8 из 20 вопросов</h3>
-  <p-progressBar [value]="40"></p-progressBar>
+  <h3>Вы ответили на {{allRight}} из {{allQuestion}} вопросов</h3>
+  <p-progressBar [value]="procRight"></p-progressBar>
   <div style="margin-top: 2%;">
     <p-accordion [multiple]="true">
       <p-accordionTab header="Обнаруженные дефекты пользовательского интерфейса">
-        Вы обнаружили 5 из 10 дефектов пользовательского интерфейса
+        Вы обнаружили {{answer.results[0].countRight}} из {{answer.results[0].allCount}} дефектов пользовательского интерфейса
       </p-accordionTab>
       <p-accordionTab header="Обнаруженные функциональные дефекты">
-        Вы обнаружили 3 из 10 функциональных дефекта
+        Вы обнаружили {{answer.results[1].countRight}} из {{answer.results[1].allCount}} функциональных дефекта
       </p-accordionTab>
       <p-accordionTab header="Рекомендации">
-        Вам следует углубиться в тестирование пользовательского интерфейса.<br>
-        Вам следует углубиться в функциональное тестирование
+        {{answer.results[0].recommendation}}<br><br>
+        {{answer.results[1].recommendation}}
       </p-accordionTab>
     </p-accordion>
   </div>

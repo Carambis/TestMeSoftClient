@@ -1,6 +1,6 @@
 <div *ngIf="openAnswer">
-  <div *ngFor="let question of questions">
-    <p-radioButton value="{{question}}" label="${{question}}" [(ngModel)]="selectedValue"></p-radioButton>
+  <div *ngFor="let question of questions" style="margin-top: 5px">
+    <p-radioButton value="{{question}}" label="{{question}}" [(ngModel)]="selectedValue"></p-radioButton>
   </div>
 </div>
 

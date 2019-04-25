@@ -23,6 +23,10 @@ import {RadiobuttonCheckComponent} from './task/radiobutton-check/radiobutton-ch
 import {SortProblemComponent} from './task/sort-problem/sort-problem.component';
 import {UnckeckParamComponent} from './task/unckeck-param/unckeck-param.component';
 import {ResultPageComponent} from './result-page/result-page.component';
+import {LoginComponent} from './login/login.component';
+import {TheoryComponent} from './theory/theory.component';
+import {InstructionComponent} from './instruction/instruction.component';
+import {TaskGuard} from './TaskGuard';
 
 
 const tasks: Routes = [
@@ -51,13 +55,18 @@ const tasks: Routes = [
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: MainPageComponent},
-  {path: 'task', component: TaskComponent, children: tasks},
-  {path: 'finishTest', component: ResultPageComponent}
+  {path: 'task', component: TaskComponent, children: tasks, canActivate: [TaskGuard]},
+  {path: 'finishTest', component: ResultPageComponent, canActivate: [TaskGuard]},
+  {path: 'login', component: LoginComponent},
+  {path: 'theory', component: TheoryComponent},
+  {path: 'instruction', component: InstructionComponent},
+  {path: 'result', component: ResultPageComponent, canActivate: [TaskGuard]}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [TaskGuard]
 })
 
 export class AppRoutingModule {

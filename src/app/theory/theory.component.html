@@ -1,3 +1,16 @@
-<p>
-  theory works!
-</p>
+<div class="ui-g">
+  <div class="ui-g-12 ui-md-8" style="margin: 0 auto;">
+    <p-accordion>
+      <p-accordionTab header="Header 1">
+        Content 1
+      </p-accordionTab>
+      <p-accordionTab header="Header 2">
+        Content 2
+      </p-accordionTab>
+    </p-accordion>
+    <div style="margin-top: 5%;text-align: center">
+      <button pButton type="button" label="Перейти к практическим заданиям" class="ui-button-rounded"
+              (click)="router.navigate(['login'])"></button>
+    </div>
+  </div>
+</div>

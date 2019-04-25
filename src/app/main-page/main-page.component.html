@@ -1,28 +1,29 @@
 <div class="ui-g">
-  <div class="ui-g-12 ui-md-4" style="margin: 0 auto; text-align: center">
-    <h2 style="text-align: center">Авторизация для прохождения тестирования</h2>
-    <div style="margin-top: 7%">
-      <span class="ui-float-label">
-       <input id="firstName" type="text" size="30" pInputText [(ngModel)]="user.firstName" style="width: 100%;"/>
-       <label for="firstName">Имя</label>
-      </span>
-    </div>
-    <div style="margin-top: 7%">
-      <span class="ui-float-label">
-       <input id="lastName" type="text" size="30" pInputText [(ngModel)]="user.lastName" style="width: 100%;"/>
-       <label for="lastName">Фамилия</label>
-      </span>
-    </div>
-    <div style="margin-top: 7%">
-      <span class="ui-float-label">
-       <input id="groupNumber" type="text" size="30" pInputText [(ngModel)]="user.groupNumber" style="width: 100%;"/>
-       <label for="groupNumber">Номер группы</label>
-      </span>
-    </div>
+  <div class="ui-g-12 ui-md-8" style="margin: 0 auto;">
+    <h2>
+      Вы находитесь на главной странице обучающего веб-ресурса тестирования программного обеспечения.<br><br>
+      В настоящее время тестирование – процесс анализа программного средства и сопутствующей документации с целью
+      выявления
+      дефектов – стало обязательной частью жизненного цикла по разработке программного обеспечения. Тестирование
+      направлено
+      на обнаружение и устранение как можно большего числа дефектов. Следствием такой деятельности является повышение
+      качества
+      программного обеспечения по всем его характеристикам.<br><br>
+      Знание основных принципов и умение тестировать программные продукты – одно из базовых требований, которое
+      предъявляется
+      к современному специалисту, работающему в сфере разработки программного обеспечения.<br><br>
+      Данный веб ресурс предоставляет следующие возможности:<br><br>
+      1. Изучение теоретических данных с помощью методического пособия ЮЗАБИЛИТИ-ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ
+      (Авторы: М.М. Меженная, Т.В. Гордейчук, М.М. Борисик, О.С. Медведев, И.Ф. Киринович)<br><br>
+      2. Решение практических задач, в которых главное целью является нахождение заключенных дефекты пользовательского
+      интерфейса
+      и функциональности (всего 20 заданий).<br><br>
+      3. Предоставление персональных рекомендаций на основе полученного результата тестирования
+      Для дальнейшей работы рекомендуется перейти к изучению теоретической части.
+    </h2>
 
-    <div style="margin-top: 7%">
-      <button pButton type="button" label="Авторизоваться"
-              class="ui-button-rounded ui-button-success" (click)="startTask()"></button>
+    <div style="margin-top: 5%;text-align: center">
+      <button pButton type="button" label="Перейти к изучению теории" class="ui-button-rounded" (click)="router.navigate(['theory'])"></button>
     </div>
   </div>
 </div>
