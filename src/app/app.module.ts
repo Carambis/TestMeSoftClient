@@ -51,6 +51,7 @@ import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {CalendarModule} from 'primeng/calendar';
 import {LoginComponent} from './login/login.component';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -108,7 +109,8 @@ import {LoginComponent} from './login/login.component';
     TableModule,
     MessagesModule,
     MessageModule,
-    CalendarModule
+    CalendarModule,
+    NgxExtendedPdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
