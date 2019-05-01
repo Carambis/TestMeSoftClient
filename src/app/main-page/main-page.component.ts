@@ -9,7 +9,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor(private router: Router, private httpClient: HttpClient) {
+  constructor(protected router: Router, protected httpClient: HttpClient) {
   }
 
   ngOnInit(): void {

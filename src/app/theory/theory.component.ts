@@ -8,7 +8,7 @@ import {Router} from '@angular/router';
 })
 export class TheoryComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(protected router: Router) { }
 
   ngOnInit() {
   }
