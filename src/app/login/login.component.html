@@ -1,28 +1,36 @@
 <div class="ui-g">
   <div class="ui-g-12 ui-md-4" style="margin: 0 auto; text-align: center">
     <h2 style="text-align: center">Авторизация для прохождения тестирования</h2>
-    <div style="margin-top: 7%">
+    <form [formGroup]="userForm" (ngSubmit)="startTask()">
+      <div style="margin-top: 7%">
       <span class="ui-float-label">
-       <input id="firstName" type="text" size="30" pInputText [(ngModel)]="user.firstName" style="width: 100%;"/>
-       <label for="firstName">Имя</label>
+       <input type="text" size="30" pInputText [(ngModel)]="user.firstName" style="width: 100%;"
+              formControlName="firstName" placeholder="Имя*"/>
+        <p-message severity="error" text="Имя обязательное поле"
+                   *ngIf="!userForm.controls.firstName.valid&&userForm.dirty" class="message"></p-message>
       </span>
-    </div>
-    <div style="margin-top: 7%">
+      </div>
+      <div style="margin-top: 7%">
       <span class="ui-float-label">
-       <input id="lastName" type="text" size="30" pInputText [(ngModel)]="user.lastName" style="width: 100%;"/>
-       <label for="lastName">Фамилия</label>
+       <input id="lastName" type="text" size="30" pInputText [(ngModel)]="user.lastName" style="width: 100%;"
+              formControlName="lastName" placeholder="Фамилия*"/>
+               <p-message severity="error" text="Фамилия обязательное поле"
+                          *ngIf="!userForm.controls.lastName.valid&&userForm.dirty" class="message"></p-message>
       </span>
-    </div>
-    <div style="margin-top: 7%">
+      </div>
+      <div style="margin-top: 7%">
       <span class="ui-float-label">
-       <input id="groupNumber" type="text" size="30" pInputText [(ngModel)]="user.groupNumber" style="width: 100%;"/>
-       <label for="groupNumber">Номер группы</label>
+       <input id="groupNumber" type="text" size="30" pInputText [(ngModel)]="user.groupNumber" style="width: 100%;"
+              formControlName="groupNumber" placeholder="Номер группы*"/>
+        <p-message severity="error" text="Номер группы обязательное поле"
+                   *ngIf="!userForm.controls.groupNumber.valid&&userForm.dirty" class="message"></p-message>
       </span>
-    </div>
+      </div>
 
-    <div style="margin-top: 7%">
-      <button pButton type="button" label="Авторизоваться"
-              class="ui-button-rounded ui-button-success" (click)="startTask()"></button>
-    </div>
+      <div style="margin-top: 7%">
+        <button pButton type="submit" label="Авторизоваться"
+                class="ui-button-rounded ui-button-success"></button>
+      </div>
+    </form>
   </div>
 </div>
