@@ -7,13 +7,13 @@ import {HttpService} from '../http.service';
   selector: 'app-filter',
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.css'],
-  providers:[HttpService]
+  providers: [HttpService]
 })
 export class FilterComponent implements OnInit {
 
   openAnswer = false;
   task: Task = new Task();
-  taskRest = 'sort-problem';
+  taskRest = 'filter';
   cols: any[];
   towns: Town[];
 
