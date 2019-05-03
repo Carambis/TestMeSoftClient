@@ -24,6 +24,9 @@ export class AnswerpartComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.questions = [
+      '12r1241kjsdkjsdfslmgsdlmg', 'asjkfasjkfsahjfsakjfkjasfksak', 'jhsdjksajgsdhgsd'
+    ];
   }
 
   saveAnswer() {

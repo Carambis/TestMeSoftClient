@@ -12,7 +12,7 @@ export class AlignmentComponent implements OnInit {
 
   openAnswer = false;
   task: Task = new Task();
-  taskRest = 'font';
+  taskRest = 'alignment';
 
   constructor(private httpService: HttpService) {
   }
