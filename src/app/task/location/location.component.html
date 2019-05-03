@@ -1,6 +1,6 @@
 <H1 style="margin-top: 5%; text-align: center">{{task.header}} {{task.taskName}}</H1>
-<div class="ui-g">
-  <div class="ui-g-12 ui-md-4" style="margin: 0 auto;text-align: center ">
+<div class="ui-g center">
+  <div class="ui-g-12 ui-md-4 center">
     <div *ngIf="openAnswer == false">
       <div style="margin-top: 7%">
       <span class="ui-float-label">
@@ -21,6 +21,8 @@
       </span>
       </div>
     </div>
+  </div>
+  <div class="ui-g-12">
     <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.answers"
                     [openAnswer]="openAnswer"></app-answerpart>
   </div>

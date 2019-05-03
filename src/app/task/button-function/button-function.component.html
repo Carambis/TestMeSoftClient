@@ -1,7 +1,7 @@
 <H1 style="margin-top: 5%; text-align: center">{{task.header}} {{task.taskName}} </H1>
 <p-toast [style]="{marginTop: '80px'}"></p-toast>
-<div class="ui-g">
-  <div class="ui-g-12 ui-md-4" style="margin: 0 auto;text-align: center ">
+<div class="ui-g center">
+  <div class="ui-g-12 ui-md-4 center">
     <div style="margin-top: 7%" *ngIf="openAnswer == false">
       <span class="ui-float-label">
        <input id="firstName" type="text" size="60" pInputText [(ngModel)]="user.firstName" style="width: 100%;"/>
@@ -25,7 +25,8 @@
       <button pButton type="button" label="Авторизоваться"
               class="ui-button-rounded ui-button-success" (click)="clear()"></button>
     </div>
-
+  </div>
+  <div class="ui-g-12">
     <app-answerpart [taskRest]="taskRest" (onchanged)="openAnswer = $event" [questions]="task.answers"
                     [openAnswer]="openAnswer"></app-answerpart>
   </div>
