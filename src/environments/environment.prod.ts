@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'http://localhost:8080/services/'
+  baseUrl: 'http://gatewaytestmesoft.mycloud.by/services/'
 };
