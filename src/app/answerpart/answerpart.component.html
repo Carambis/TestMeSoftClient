@@ -1,6 +1,6 @@
 <div *ngIf="openAnswer" style="margin-left: 30%">
-  <div *ngFor="let question of questions" style="margin-top: 5px; text-align: left">
-    <p-radioButton value="{{question}}" label="{{question}}" [(ngModel)]="selectedValue"></p-radioButton>
+  <div *ngFor="let question of questions" style="margin-top: 5px; text-align: left; font-size: 17pt;">
+    <p-radioButton value="{{question}}" label="{{question}}" [(ngModel)]="selectedValue" ></p-radioButton>
   </div>
 </div>
 
@@ -11,5 +11,5 @@
 
 <div style="margin-top: 3%" *ngIf="openAnswer">
   <button pButton type="button" label="Ответить"
-          class="ui-button-rounded" (click)="saveAnswer()" [disabled]="selectedValue == null"></button>
+          class="ui-button-rounded" (click)="saveAnswer()" [disabled]="selectedValue == null" style="font-size: 130%;"></button>
 </div>

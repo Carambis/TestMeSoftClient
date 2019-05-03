@@ -1,12 +1,13 @@
 <div style="width: 60%;margin: 0 auto;">
   <h2 style="text-align: center">Результаты тестирования</h2>
 
-  <h3>Вы ответили на {{allRight}} из {{allQuestion}} вопросов</h3>
-  <p-progressBar [value]="procRight"></p-progressBar>
+  <h3>Вы ответили на {{rightAnswers}} из {{allAnswers}} вопросов</h3>
+  <p-progressBar [value]="persRightAnswers"></p-progressBar>
   <div style="margin-top: 2%;">
     <p-accordion [multiple]="true">
       <p-accordionTab header="Обнаруженные дефекты пользовательского интерфейса">
-        Вы обнаружили {{answer.results[0].countRight}} из {{answer.results[0].allCount}} дефектов пользовательского интерфейса
+        Вы обнаружили {{answer.results[0].countRight}} из {{answer.results[0].allCount}} дефектов пользовательского
+        интерфейса
       </p-accordionTab>
       <p-accordionTab header="Обнаруженные функциональные дефекты">
         Вы обнаружили {{answer.results[1].countRight}} из {{answer.results[1].allCount}} функциональных дефекта

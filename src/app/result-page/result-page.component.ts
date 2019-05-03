@@ -11,9 +11,9 @@ import {AnswerStatistic} from './result';
 export class ResultPageComponent implements OnInit {
 
   answer: AnswerStatistic;
-  allRight: number;
-  allQuestion: number;
-  procRight: number;
+  rightAnswers: number;
+  allAnswers: number;
+  persRightAnswers: number;
 
   constructor(private httpClient: HttpClient) {
   }
@@ -25,9 +25,9 @@ export class ResultPageComponent implements OnInit {
       })
     }).subscribe((data: AnswerStatistic) => {
       this.answer = data;
-      this.allRight = this.answer.results[0].countRight + this.answer.results[1].countRight;
-      this.allQuestion = this.answer.results[0].allCount + this.answer.results[1].allCount;
-      this.procRight = this.allRight / this.allQuestion * 100;
+      this.rightAnswers = this.answer.results[0].countRight + this.answer.results[1].countRight;
+      this.allAnswers = this.answer.results[0].allCount + this.answer.results[1].allCount;
+      this.persRightAnswers = this.rightAnswers * 100 / this.allAnswers;
     });
   }
 

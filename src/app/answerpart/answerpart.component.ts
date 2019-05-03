@@ -12,7 +12,6 @@ export class AnswerpartComponent implements OnInit {
   selectedValue: string;
   @Input() openAnswer: boolean;
   @Input() taskRest: string;
-
   @Output() onchanged = new EventEmitter<boolean>();
 
   change(openAnswer: boolean) {
