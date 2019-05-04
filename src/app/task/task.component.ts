@@ -14,7 +14,10 @@ export class TaskComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getNextTask();
+    const taskRest = sessionStorage.getItem('current_task_rest');
+    if (taskRest == null || taskRest.length === 0) {
+      this.getNextTask();
+    }
   }
 
   getNextTask() {
