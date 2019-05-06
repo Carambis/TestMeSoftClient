@@ -14,7 +14,10 @@ export class TaskComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getNextTask();
+    const taskRest = sessionStorage.getItem('current_task_rest');
+    if (taskRest == null || taskRest.length === 0) {
+      this.getNextTask();
+    }
   }
 
   getNextTask() {
@@ -25,8 +28,8 @@ export class TaskComponent implements OnInit {
     }).subscribe((data: string) => {
       if (data === 'finishTest') {
         this.router.navigate(['/result']);
-        // this.http.get(environment.baseUrl + 'task_service/getResult');
       } else {
+        sessionStorage.setItem('current_task_rest', data);
         this.router.navigate(['/task/' + data], {
           skipLocationChange: true
         });
