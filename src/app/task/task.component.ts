@@ -31,6 +31,7 @@ export class TaskComponent implements OnInit {
           skipLocationChange: true
         });
       }
+      sessionStorage.setItem('current_task_rest', data);
     });
   }
 
