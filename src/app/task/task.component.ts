@@ -29,7 +29,6 @@ export class TaskComponent implements OnInit {
       if (data === 'finishTest') {
         this.router.navigate(['/result']);
       } else {
-        sessionStorage.setItem('current_task_rest', data);
         this.router.navigate(['/task/' + data], {
           skipLocationChange: true
         });
