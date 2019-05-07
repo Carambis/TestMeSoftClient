@@ -28,12 +28,13 @@ export class TaskComponent implements OnInit {
     }).subscribe((data: string) => {
       if (data === 'finishTest') {
         this.router.navigate(['/result']);
+        sessionStorage.setItem('current_task_rest', '/result');
       } else {
         this.router.navigate(['/task/' + data], {
           skipLocationChange: true
         });
+        sessionStorage.setItem('current_task_rest', data);
       }
-      sessionStorage.setItem('current_task_rest', data);
     });
   }
 
