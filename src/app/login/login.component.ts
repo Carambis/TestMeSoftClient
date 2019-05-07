@@ -27,9 +27,13 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     if (sessionStorage.getItem('access_token') != null) {
       const taskRest = sessionStorage.getItem('current_task_rest');
-      this.router.navigate(['/task/' + taskRest], {
-        skipLocationChange: true
-      });
+      if (taskRest === '/result') {
+        this.router.navigate([taskRest]);
+      } else {
+        this.router.navigate(['/task/' + taskRest], {
+          skipLocationChange: true
+        });
+      }
     }
     this.userForm = this.fb.group({
       firstName: new FormControl('', Validators.required),
