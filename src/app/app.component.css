@@ -1,0 +1,12 @@
+:host::ng-deep.ui-menubar .ui-menubar-root-list>.ui-menuitem{
+  background-color: #007ad9;
+}
+
+:host::ng-deep.ui-menubar{
+  background-color: #007ad9;
+}
+
+:host::ng-deep .ui-menubar .ui-menuitem-link .ui-menuitem-text{
+  font-size:15pt;
+  color:white;
+}
