@@ -6,10 +6,10 @@
 
 <div style="margin-top: 5%" *ngIf="openAnswer == false">
   <button pButton type="button" label="Показать варианты ответов"
-          class="ui-button-rounded" (click)="change(true)"></button>
+          class="ui-button-rounded" (click)="change(true)" style="font-size:130%"></button>
 </div>
 
 <div style="margin-top: 3%" *ngIf="openAnswer">
   <button pButton type="button" label="Ответить"
-          class="ui-button-rounded" (click)="saveAnswer()" [disabled]="selectedValue == null" style="font-size: 130%;"></button>
+          class="ui-button-rounded" (click)="saveAnswer()" [disabled]="selectedValue == null" ></button>
 </div>
