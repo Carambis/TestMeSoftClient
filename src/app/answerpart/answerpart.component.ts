@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {HttpService} from '../task/http.service';
+import {TaskService} from '../task/service/task.service';
 
 @Component({
   selector: 'app-answerpart',
@@ -19,7 +19,7 @@ export class AnswerpartComponent implements OnInit {
     this.openAnswer = openAnswer;
   }
 
-  constructor(private httpService: HttpService) {
+  constructor(private httpService: TaskService) {
   }
 
   ngOnInit() {
